@@ -1,0 +1,96 @@
+.Solution {
+    margin-bottom: 60px;
+    transition: all 0.6s;
+    height: auto;
+
+    .heading {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        h1 {
+            margin: 0;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 34px;
+            color: #1E1A20;
+            mix-blend-mode: normal;
+            opacity: 0.9;
+        }
+
+        .plus {
+            height: 40px;
+            width: 40px;
+            background: #F2726C;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+
+            span {
+                display: block;
+                position: absolute;
+                background: #fff;
+                height: 2px;
+                width: 15px;
+
+                &:nth-child(2) {
+                    transform: rotate(90deg);
+                }
+            }
+        }
+    }
+
+    p {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #1E1A20;
+        mix-blend-mode: normal;
+        opacity: 0.9;
+        margin-top: 15px;
+        max-height: 0px;
+        overflow: hidden;
+        width: 85%;
+        transition: all 0.3s ease-in-out;
+        transform-origin: top;
+    }
+
+}
+
+.Solution.Active {
+    p {
+        max-height: 500px;
+    }
+
+    .heading {
+        .plus {
+            span {
+                &:nth-child(2) {
+                    display: none !important;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .Solution {
+        .heading {
+            h1 {
+                font-size: 18px;
+            }
+
+            .plus {
+                min-height: 40px;
+                min-width: 40px;
+            }
+        }      
+    }
+}

@@ -1,0 +1,75 @@
+.Footer {
+    height: 270px;
+    width: 80%;
+    padding: 60px 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    h1 {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 48px;
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        color: #333333;
+    }
+
+    p {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 24px;
+        letter-spacing: 0.3px;
+        color: #333333;
+        mix-blend-mode: normal;
+    }
+
+    .contacts {
+        h1 {
+            font-size: 34px;
+        }
+    }
+
+    .headqrt {
+        p {
+            line-height: 32px;
+        }
+    }
+
+    .social {
+        .icons {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .Footer {
+        height: auto;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+
+        h1 {
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 12px;
+        }
+
+        .contacts {
+            h1 {
+                font-size: 28px;
+            }
+        }
+    }
+}

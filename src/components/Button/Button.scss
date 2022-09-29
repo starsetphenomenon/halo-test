@@ -1,0 +1,18 @@
+.Button {
+    background: #F2726C;
+    border-radius: 30px;
+    border: none;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 140%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #fff;
+    -webkit-tap-highlight-color: transparent;
+}

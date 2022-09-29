@@ -1,0 +1,180 @@
+.Promo {
+    width: 90%;
+    padding: 0 5%;
+
+    .content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 100px;
+        width: 90%;
+        padding: 5%;
+
+        .info {
+            width: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+
+            .location-wrapper {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                .location {
+                    margin-left: 20px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 20px;
+
+                    p {
+                        font-family: 'Poppins';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 24px;
+                        color: #807C7C;
+                    }
+                }
+
+                button {
+                    width: 122px;
+                    height: 48px;
+                }
+            }
+
+            h1 {
+                width: 140%;
+                display: inline-block;
+                font-family: 'Brush Script MT', cursive;
+                font-size: 12rem;
+                margin: 15px 0 120px 0;
+                font-weight: 400;
+                line-height: 130px;
+            }
+
+            p {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 32px;
+            }
+        }
+
+        .parrot {
+            margin-top: -30px;
+
+            .bg {
+                height: 565px;
+                width: 460px;
+                background-size: cover;
+                position: relative;
+
+                .card {
+                    background-size: cover;
+                    height: 320px;
+                    width: 270px;
+                    position: absolute;
+                    bottom: -10%;
+                    left: -10%;
+
+                    &-info {
+                        position: absolute;
+                        bottom: 32px;
+                        left: 32px;
+
+                        h3 {
+                            font-family: 'Poppins';
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 20px;
+                            line-height: 140%;
+                            text-transform: capitalize;
+                            color: #fff;
+                            margin: 5px 0;
+                        }
+
+                        span {
+                            font-family: 'Poppins';
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 56px;
+                            line-height: 80px;
+                            color: #fff;
+                        }
+                    }
+
+                    svg {
+                        position: absolute;
+                        height: 56px;
+                        width: 48px;
+                        top: 30px;
+                        left: 35px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .Promo {
+        .content {
+            flex-direction: column;
+
+            .info {
+                width: 100%;
+
+                h1 {
+                    width: 100%;
+                    font-size: 5rem;
+                    margin-bottom: 30px;
+                }
+
+                .location-wrapper {
+                    .location {
+                        margin-left: 0;
+                    }
+
+                }
+            }
+
+            .parrot {
+                width: 100%;
+                transform: scale(0.7);
+
+                .bg {
+                    width: 100%;
+
+                    .card {
+                        bottom: 10%;
+                        left: -5%;
+                        width: 215px;
+                        height: 255px;
+
+                        &-info {
+                            bottom: 30px;
+
+                            h3 {
+                                font-size: 19px;
+                                line-height: 1rem;
+                            }
+
+                            span {
+                                line-height: 3rem;
+                                font-size: 40px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

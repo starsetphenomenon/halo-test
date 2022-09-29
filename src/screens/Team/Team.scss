@@ -1,0 +1,105 @@
+.Team {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 200px 10%;
+
+    h1,
+    h3 {
+        margin: 0;
+        margin-top: 15px;
+    }
+
+    h1 {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 56px;
+        text-align: center;
+        text-transform: capitalize;
+        color: #222433;
+    }
+
+    .SubTitle {
+        width: 300px;
+    }
+
+    .members {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        .member {
+
+            img {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                z-index: 10;
+            }
+
+            &:nth-child(2) {
+                margin-top: 20%;
+            }
+        }
+    }
+
+
+    .line1 {
+        position: absolute;
+        z-index: 1;
+        left: 20%;
+        top: 35%;
+    }
+
+    .line2 {
+        position: absolute;
+        z-index: 1;
+        right: 15%;
+        bottom: 5%;
+        transform: rotate(140deg);
+    }
+}
+
+@media (max-width: 576px) {
+    .Team {
+        padding: 60px 32px;
+        .SubTitle{
+            width: 90%;
+        }
+        .members {
+            flex-direction: column;
+
+            .member {
+                max-width: 200px;
+            }
+
+            :nth-child(even) {
+                margin: 0 0 30px auto !important;
+            }
+
+            :nth-child(odd) {
+                margin-right: auto !important;
+                margin-bottom: 30px;
+            }
+
+            .line1 {
+                top: 15%;
+                left: 5%;
+                transform: rotate(45deg) scale(0.8);
+            }
+
+            .line2 {
+                bottom: 25%;
+                right: 10%;
+                transform: rotate(-90deg) scale(0.8);
+            }
+        }
+    }
+}

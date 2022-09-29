@@ -1,0 +1,199 @@
+.Header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    height: 80px;
+    border-bottom: 4px solid #222433;
+    margin-top: 30px;
+    z-index: 20000;
+
+    .mobileMenu {
+        margin-top: 114px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #fff;
+        height: 100%;
+        width: 80%;
+        transform: translateX(-100%);
+        transition: all 0.3s ease-in-out;
+        padding: 70px 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        z-index: 999;
+
+
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+
+
+                a {
+                    font-family: 'Poppins';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 28px;
+                    line-height: 150%;
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+                    color: #000000;
+                    opacity: 0.8;
+                    margin-top: 55px;
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+
+                    &:hover {
+                        text-shadow: none;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+
+        .mobileApply {
+            margin-top: 180px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 19px;
+            line-height: 140%;
+            text-align: center;
+            text-decoration: none;
+
+            &:hover {
+                text-shadow: none;
+                font-weight: bolder;
+            }
+        }
+    }
+
+    .activeMobile {
+        transform: translateX(0);
+    }
+
+    .burger {
+        height: 17px;
+        width: 22px;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        cursor: pointer;
+        padding: 10px;
+        -webkit-tap-highlight-color: transparent;
+
+        span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background: #000;
+
+            &:nth-child(2) {
+                width: 75%;
+            }
+        }
+    }
+
+    .openedBurger {
+        position: relative;
+
+        span {
+            position: absolute;
+            left: 0;
+            top: 50%;
+
+            &:nth-child(1) {
+                transform: rotate(45deg) scaleX(0.5);
+            }
+
+            &:nth-child(2) {
+                display: none;
+            }
+
+            &:nth-child(3) {
+                transform: rotate(-45deg) scaleX(0.5);
+            }
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: #000;
+        cursor: pointer;
+
+        &:hover {
+            text-shadow: 0 0 1px black, 0 0 1px black;
+            opacity: 1;
+        }
+    }
+
+
+    .links {
+        .menu-links {
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                gap: 70px;
+
+                li {
+                    cursor: pointer;
+
+                    a {
+                        display: block;
+                        padding: 10px 30px;
+                        font-family: 'Poppins';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 32px;
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+    }
+
+    .apply {
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 48px;
+            width: 145px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .Header {
+
+        .links,
+        .apply {
+            display: none;
+        }
+
+        .burger {
+            display: flex;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+.SubTitle {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+    color: #1E1A20;
+    mix-blend-mode: normal;
+    opacity: 0.9;
+}
+
+@media (max-width: 576px) {
+    .SubTitle {
+        font-size: 15px !important;
+    }
+}
