@@ -16,3 +16,17 @@
     color: #fff;
     -webkit-tap-highlight-color: transparent;
 }
+
+.clicked {
+    animation: clicked 0.3s ease-out backwards;
+}
+
+@keyframes clicked {
+    0% {
+        box-shadow: 0px 0px 0px #F2726C;
+    }
+
+    100% {
+        box-shadow: 0px 0px 16px 4px #F2726C;
+    }
+}

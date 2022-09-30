@@ -1,10 +1,25 @@
 import './Button.scss';
+import { useState } from 'react';
 
-import React from 'react'
+export default function Button({ BtnType, children, onClick, preventDef }) {
 
-export default function Button({ BtnType, children, onClick }) {
+    const [clicked, setClicked] = useState(false)
+
+    const onBtnClick = (e) => {
+        if (onClick) {
+            onClick(e);
+        }
+        if (preventDef) {
+            return
+        }
+        setClicked(true);
+        setTimeout(() => {
+            setClicked(false)
+        }, 1000)
+    }
+
     return (
-        <button onClick={onClick} type={BtnType} className="Button">
+        <button onClick={onBtnClick} type={BtnType} className={clicked ? "Button clicked" : "Button"}>
             {children}
         </button>
     )
