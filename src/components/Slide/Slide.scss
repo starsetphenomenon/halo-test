@@ -6,6 +6,13 @@
     -webkit-tap-highlight-color: transparent;
 
     &:hover {
+        .bg-shadow {
+            filter: brightness(0) invert(1);
+            z-index: 0;
+            transform: scale(1.1);
+            opacity: 0.2;
+        }
+
         .title {
             color: #1E1A20;
         }
@@ -72,6 +79,11 @@
         position: absolute;
         filter: brightness(0) invert(1);
     }
+
+    .bg-shadow {
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+    }
 }
 
 @keyframes slide {
@@ -84,12 +96,33 @@
     }
 }
 
+@media (min-width: 1201px) {
+    .Slide {
+        .title {
+            top: 35%;
+            width: 90%;
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 1200px) and (min-width: 993px) {
+    .Slide {
+        .title {
+            width: 90%;
+            text-align: center;
+        }
+    }
+}
+
+
 @media (max-width: 576px) {
-    .Slide{
-        .title{
+    .Slide {
+        .title {
             font-size: 18px;
         }
-        p{
+
+        p {
             top: 60%;
         }
     }

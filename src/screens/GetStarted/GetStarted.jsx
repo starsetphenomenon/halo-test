@@ -1,12 +1,20 @@
 import './GetStarted.scss';
 
-import React from 'react'
+import React, { useState } from 'react'
 import Button from '../../components/Button/Button';
 import Title from '../../components/Title/Title';
 import SubTitle from '../../components/SubTitle/SubTitle';
 import Solution from '../../components/Solution/Solution';
 
 export default function GetStarted() {
+
+    const [onBook, setOnBook] = useState(false);
+
+    const bookDemo = (e) => {
+        e.preventDefault();
+        setOnBook(prev => !prev)
+    }
+
     return (
         <div className="GetStarted">
             <form className="form" action=".">
@@ -16,7 +24,7 @@ export default function GetStarted() {
                         From smart consumption to switching to renewable energy,
                         each of us can do our part to save the planet.</SubTitle>
                 </div>
-                <div className="form-login">
+                <div className={onBook ? "form-login pressed" : "form-login"}>
                     <div className="leafBig">
                         <img src="/assets/img/leafBig.svg" alt="" />
                     </div>
@@ -26,7 +34,7 @@ export default function GetStarted() {
                     <h2>Log In</h2>
                     <input type="text" name="name" placeholder="Name" spellCheck="false" />
                     <input type="email" name="mail" placeholder="Email" spellCheck="false" />
-                    <Button BtnType="submit">Book a demo</Button>
+                    <Button onClick={bookDemo} BtnType="submit">Book a demo</Button>
                 </div>
             </form>
             <div className="solutions">

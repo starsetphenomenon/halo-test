@@ -124,7 +124,66 @@
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 1200px) and (min-width: 993px) {
+    .Promo {
+        overflow: hidden;
+        .content {
+            .info {
+                h1 {
+                    width: 120%;
+                }
+            }
+
+            .parrot {
+                transform: scale(0.9);
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) and (min-width: 769px) {
+    .Promo {
+        .content {
+            flex-direction: column;
+
+            .info {
+                h1 {
+                    width: 100%;
+                }
+
+                p {
+                    font-size: 1.5rem;
+                }
+
+                width: 100%;
+
+                .location-wrapper {
+                    justify-content: space-around;
+                }
+            }
+
+            .parrot {
+                width: 100%;
+
+                .bg {
+                    width: 80%;
+                    transform: translateX(30%);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+
+                    .card {
+                        bottom: 0%;
+                        left: -35%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
     .Promo {
         .content {
             flex-direction: column;
@@ -134,11 +193,12 @@
 
                 h1 {
                     width: 100%;
-                    font-size: 5rem;
+                    font-size: 8rem;
                     margin-bottom: 30px;
                 }
 
                 .location-wrapper {
+
                     .location {
                         margin-left: 0;
                     }
@@ -148,14 +208,14 @@
 
             .parrot {
                 width: 100%;
-                transform: scale(0.7);
+                transform: translateX(8%);
 
                 .bg {
                     width: 100%;
 
                     .card {
-                        bottom: 10%;
-                        left: -5%;
+                        bottom: -2%;
+                        left: -15%;
                         width: 215px;
                         height: 255px;
 
@@ -173,6 +233,34 @@
                             }
                         }
                     }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .Promo {
+        .content {
+            .info {
+                h1 {
+                    font-size: 5rem;
+                }
+            }
+        }
+
+        .parrot {
+            width: 100%;
+            transform: scale(0.7);
+
+            .bg {
+
+                .card {
+                    bottom: 15% !important;
+                    left: -5%;
+                    width: 215px;
+                    height: 255px;
+                    transform: scale(0.9);
                 }
             }
         }

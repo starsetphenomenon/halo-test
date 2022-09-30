@@ -15,7 +15,7 @@ export default function Slider() {
                     clickable: true,
                     type: "fraction",
                 }}
-                slidesPerView={4}
+                slidesPerView={3}
                 spaceBetween={50}
                 loop={true}
                 centeredSlides={true}
@@ -26,9 +26,17 @@ export default function Slider() {
                     320: {
                         slidesPerView: 1,
                     },
-                    768: {
+                    769: {
+                        slidesPerView: 2,
+                        centeredSlides: true,
+                    },
+                    993: {
+                        slidesPerView: 3,
+                        centeredSlides: true,
+                    },
+                    1200: {
                         slidesPerView: 4,
-                        centeredSlides: false,
+                        centeredSlides: true,
                     },
                 }}
             >
@@ -57,7 +65,12 @@ export default function Slider() {
                     </Slide>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Slide img="/assets/img/slider/slide2.svg" title="Save watter">Taking on the issue of ensuring
+                    <Slide img="/assets/img/slider/slide1.svg" title="Save watter">Taking on the issue of ensuring
+                        access to safe water requires worldwide effort.
+                    </Slide>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Slide img="/assets/img/slider/slide2.svg" title="Choose organic">Taking on the issue of ensuring
                         access to safe water requires worldwide effort.
                     </Slide>
                 </SwiperSlide>

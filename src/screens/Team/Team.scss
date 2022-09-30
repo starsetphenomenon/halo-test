@@ -67,17 +67,59 @@
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 1200px) and (min-width: 993px) {
     .Team {
-        padding: 60px 32px;
-        .SubTitle{
+        .members {
+            gap: 60px;
+
+            .line1 {
+                left: 10%;
+                top: 17%;
+                transform: scale(0.9);
+            }
+
+            .line2 {
+                right: 5%;
+                bottom: 0%;
+                transform: scale(0.7) rotate(140deg);
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) and (min-width: 769px) {
+    .Team {
+        .members {
+            gap: 30px;
+
+            .line1 {
+                left: 10%;
+                top: 17%;
+                transform: scale(0.7);
+            }
+
+            .line2 {
+                right: -3%;
+                bottom: 0%;
+                transform: scale(0.7) rotate(140deg);
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .Team {
+        padding: 60px 10%;
+
+        .SubTitle {
             width: 90%;
         }
+
         .members {
             flex-direction: column;
 
             .member {
-                max-width: 200px;
+                max-width: 300px;
             }
 
             :nth-child(even) {
@@ -90,7 +132,30 @@
             }
 
             .line1 {
-                top: 15%;
+                top: 20%;
+                left: 5%;
+                transform: rotate(35deg) scale(0.8);
+            }
+
+            .line2 {
+                bottom: 25%;
+                right: 10%;
+                transform: rotate(-60deg) scale(0.8);
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .Team {
+        .members {
+
+            .member {
+                max-width: 200px !important;
+            }
+
+            .line1 {
+                top: 15% !important;
                 left: 5%;
                 transform: rotate(45deg) scale(0.8);
             }

@@ -8,6 +8,7 @@ export default function Slide({ img, title, children }) {
             <div className="title">{title}</div>
             <img className="cover" src={img} alt="" />
             <img className="bg" src={img} alt="" />
+            <img className="bg-shadow" src={img} alt="" />
             <p>{children}</p>
         </div>
     )

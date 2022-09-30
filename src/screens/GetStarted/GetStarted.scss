@@ -130,7 +130,56 @@
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 1200px) and (min-width: 993px) {
+    .GetStarted {
+        .form {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 30px;
+
+            &-info {
+                width: 100%;
+            }
+
+            &-login {
+                width: 100%;
+            }
+        }
+
+        .solutions {
+            gap: 60px;
+
+            &-info {
+                width: 100%;
+            }
+
+            &-list {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) and (min-width: 769px) {
+    .GetStarted {
+        .solutions {
+            flex-direction: column;
+            align-items: space-between;
+            gap: 60px;
+
+            &-info {
+                width: 100%;
+            }
+
+            &-list {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
     .GetStarted {
         width: 100%;
         padding: 0;
@@ -162,13 +211,83 @@
             padding: 60px 0;
             flex-direction: column;
             align-items: center;
-            &-info{
+
+            &-info {
                 width: 90%;
             }
-            &-list{
+
+            &-list {
                 margin-top: 50px;
                 width: 90%;
             }
         }
+    }
+}
+
+.pressed {
+    animation: formLogin 0.6s ease-in-out forwards;
+
+    .leafBig {
+        animation: big 2s ease-out forwards;
+    }
+
+    .leafSmall {
+        animation: sm 2s ease-in-out forwards;
+    }
+}
+
+@keyframes formLogin {
+    0% {
+        transform: rotate(2deg) translateX(5%);
+    }
+
+    50% {
+        transform: rotate(-2deg) translateX(-2%);
+    }
+
+    100% {
+        transform: rotate(0deg) translateX(0);
+    }
+}
+
+@keyframes big {
+    0% {
+        transform: rotate(0) translateY(0);
+    }
+
+    20% {
+        transform: rotate(90deg) translateY(20%);
+        ;
+    }
+
+    40% {
+        transform: rotate(0deg) translateY(-20%);
+        ;
+    }
+
+    100% {
+        transform: rotate(-120deg) translateY(0);
+        top: 110%;
+    }
+}
+
+@keyframes sm {
+    0% {
+        transform: rotate(0) translateY(0);
+    }
+
+    20% {
+        transform: rotate(90deg) translateY(20%);
+        ;
+    }
+
+    40% {
+        transform: rotate(0deg) translateY(-20%);
+        ;
+    }
+
+    100% {
+        transform: rotate(-120deg) translateY(0);
+        top: 110%;
     }
 }
