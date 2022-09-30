@@ -17,20 +17,17 @@ export default function GetStarted({ winWidth }) {
     }
 
     const [parallax, setParallax] = useState({
-        x: [70, -30],
-        y: [-50, 50],
+        y: [-70, 70],
     })
 
     useEffect(() => {
         if ((winWidth > 992) && (winWidth <= 1200)) {
             setParallax({
-                x: [40, -40],
                 y: [-50, 50],
             })
         }
-        if (winWidth <= 992) {      
+        if (winWidth <= 992) {
             setParallax({
-                x: [0, 0],
                 y: [0, 0],
             })
         }
@@ -40,27 +37,23 @@ export default function GetStarted({ winWidth }) {
         <div className="GetStarted">
             <form className="form" action=".">
                 <Parallax className="form-info" speed={5} translateY={parallax.y}>
-                    <div className="form-info">
-                        <Title>Get started today!</Title>
-                        <SubTitle>Learn more about how you can save our planet's nature.
-                            From smart consumption to switching to renewable energy,
-                            each of us can do our part to save the planet.</SubTitle>
-                    </div>
+                    <Title>Get started today!</Title>
+                    <SubTitle>Learn more about how you can save our planet's nature.
+                        From smart consumption to switching to renewable energy,
+                        each of us can do our part to save the planet.</SubTitle>
                 </Parallax>
-                <Parallax className={onBook ? "form-login pressed" : "form-login"} speed={-5} translateX={parallax.x}>
-                    <div className={onBook ? "form-login pressed" : "form-login"}>
-                        <div className="leafBig">
-                            <img src="/assets/img/leafBig.svg" alt="" />
-                        </div>
-                        <div className="leafSmall">
-                            <img src="/assets/img/leafSmall.svg" alt="" />
-                        </div>
-                        <h2>Log In</h2>
-                        <input type="text" name="name" placeholder="Name" spellCheck="false" />
-                        <input type="email" name="mail" placeholder="Email" spellCheck="false" />
-                        <Button preventDef={true} onClick={bookDemo} BtnType="submit">Book a demo</Button>
+                <div className={onBook ? "form-login pressed" : "form-login"}>
+                    <div className="leafBig">
+                        <img src="/assets/img/leafBig.svg" alt="" />
                     </div>
-                </Parallax>
+                    <div className="leafSmall">
+                        <img src="/assets/img/leafSmall.svg" alt="" />
+                    </div>
+                    <h2>Log In</h2>
+                    <input type="text" name="name" placeholder="Name" spellCheck="false" />
+                    <input type="email" name="mail" placeholder="Email" spellCheck="false" />
+                    <Button preventDef={true} onClick={bookDemo} BtnType="submit">Book a demo</Button>
+                </div>
             </form>
             <div className="solutions">
                 <div className="solutions-info">

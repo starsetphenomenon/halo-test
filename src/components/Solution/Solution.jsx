@@ -1,5 +1,6 @@
 import './Solution.scss';
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { Parallax } from 'react-scroll-parallax';
 
 export default function Solution({ title, children }) {
 
@@ -13,10 +14,10 @@ export default function Solution({ title, children }) {
         <div className={solution ? "Solution Active" : "Solution"}>
             <div className="heading">
                 <h1>{title}</h1>
-                <div onClick={handleSolution} className="plus">
-                    <span></span>
-                    <span></span>
-                </div>
+                    <div onClick={handleSolution} className="plus">
+                        <span></span>
+                        <span></span>
+                    </div>
             </div>
             <p>
                 {children}
